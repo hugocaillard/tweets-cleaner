@@ -6,9 +6,9 @@ const jsonfile = require('jsonfile')
 const config = require('./config')
 
 function getTweets () {
-  global.window = { YTD: { tweet: { } } }
+  global.window = { YTD: { tweets: { } } }
   const tweets = require(config.path)
-  return window.YTD.tweet.part0.map(object => object.tweet)
+  return window.YTD.tweets.part0.map(object => object.tweet)
 }
 
 const logFile = config.log || './log.json'
